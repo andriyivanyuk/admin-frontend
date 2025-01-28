@@ -6,6 +6,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CreateProductComponent } from './components/create-product/create-product.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { VerifyComponent } from './components/verify/verify.component';
 
 export const routes: Routes = [
   {
@@ -19,6 +20,7 @@ export const routes: Routes = [
     children: [
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
+      { path: 'verify/:token', component: VerifyComponent },
     ],
   },
   {

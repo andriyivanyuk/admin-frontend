@@ -7,9 +7,9 @@
           <div class="form-group">
             <label for="username">Ім'я користувача </label>
             <input
+              formControlName="username"
               type="text"
               id="username"
-              formControlName="username"
               class="form-control"
               placeholder="Введіть ім'я"
             />
@@ -18,6 +18,7 @@
           <div class="form-group">
             <label for="exampleInputEmail1">Email</label>
             <input
+              formControlName="email"
               type="email"
               class="form-control"
               placeholder="Введіть email"
@@ -27,6 +28,7 @@
           <div class="form-group">
             <label for="exampleInputPassword1">Пароль</label>
             <input
+              formControlName="password"
               type="password"
               class="form-control"
               id="exampleInputPassword1"
@@ -34,20 +36,13 @@
             />
           </div>
 
-          <div class="form-group">
-            <label for="role">Роль</label>
-            <select
-              class="form-select"
-              id="role"
-              aria-label="Floating label select example"
-              formControlName="role"
-            >
-              <option selected>ADMIN</option>
-              <option value="1">ASISTANT</option>
-            </select>
-          </div>
-
-          <button class="btn submit-btn">Створити акаунт</button>
+          <button
+            [disabled]="form.invalid"
+            (click)="createAccount()"
+            class="btn submit-btn"
+          >
+            Створити акаунт
+          </button>
         </div>
       </div>
     </div>
