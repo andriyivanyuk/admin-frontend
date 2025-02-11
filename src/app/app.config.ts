@@ -13,6 +13,8 @@ import {
   provideHttpClient,
   withInterceptorsFromDi,
 } from '@angular/common/http';
+import { TokenStorageService } from './services/token-storage.service';
+import { AuthGuard } from './guards/auth.guard';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -26,5 +28,7 @@ export const appConfig: ApplicationConfig = {
       multi: true,
     },
     AuthService,
+    TokenStorageService,
+    AuthGuard,
   ],
 };

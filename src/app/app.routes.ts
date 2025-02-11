@@ -7,6 +7,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CreateProductComponent } from './components/create-product/create-product.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { VerifyComponent } from './components/verify/verify.component';
+import { AuthGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
   {
@@ -18,15 +19,19 @@ export const routes: Routes = [
     path: 'auth',
     component: AuthLayoutComponent,
     children: [
-      { path: 'login', component: LoginComponent },
-      { path: 'register', component: RegisterComponent },
+      { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
+      {
+        path: 'register',
+        component: RegisterComponent,
+        canActivate: [AuthGuard],
+      },
       { path: 'verify/:token', component: VerifyComponent },
     ],
   },
   {
     path: 'admin',
     component: AdminLayoutComponent,
-    // canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'create-product', component: CreateProductComponent },

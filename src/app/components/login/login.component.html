@@ -1,5 +1,5 @@
 <div class="login-wrapper">
-  <form [formGroup]="form">
+  <form [formGroup]="form" class="main-form">
     <div class="card">
       <div class="card-body">
         <h4 class="card-title">Логін</h4>
@@ -11,8 +11,7 @@
               type="email"
               class="form-control"
               placeholder="Введіть email"
-              formControlName="email"
-            />
+              formControlName="email"/>
           </div>
           <div class="form-group">
             <label for="main-password">Пароль</label>
@@ -21,8 +20,7 @@
               class="form-control"
               id="main-password"
               placeholder="Введіть пароль"
-              formControlName="password"
-            />
+              formControlName="password"/>
           </div>
           <div class="form-group">
             <div class="additional-account">
@@ -30,7 +28,12 @@
               <a class="link" routerLink="/auth/register">Реестрація</a>
             </div>
           </div>
-          <button (click)="signIn()" class="btn login-btn">Ввійти</button>
+          <button
+            [disabled]="form.invalid"
+            (click)="signIn()"
+            class="btn login-btn">
+            Ввійти
+          </button>
         </div>
       </div>
     </div>

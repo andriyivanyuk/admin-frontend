@@ -22,4 +22,9 @@ export class AuthService {
   public verifyEmail(token: string): Observable<any> {
     return this.http.get(this.apiUrl + '/verify/' + token);
   }
+
+  public isLoggedIn(): boolean {
+    const token = localStorage.getItem('auth_token');
+    return !!token;
+  }
 }
