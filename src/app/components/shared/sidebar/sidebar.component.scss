@@ -1,7 +1,66 @@
 .sidebar {
+  position: relative;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
   background-color: #285059;
-  width: 250px;
+  width: 260px;
   height: 100vh;
   margin-bottom: 0;
-  padding: 1rem;
+  padding: 1rem 25px 1rem 18px;
+  row-gap: 8px;
+
+  .main-item {
+    display: flex;
+    column-gap: 1rem;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .subitem:hover,
+  .main-item:hover {
+    background-color: hsla(0, 0%, 100%, 0.1);
+    border-radius: 5px;
+  }
+
+  .subitem {
+    display: flex;
+    column-gap: 1rem;
+    margin-left: 10px;
+    padding: 12px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .menu-icon {
+    color: white;
+  }
+}
+
+.active-link {
+  background-color: hsla(0, 0%, 100%, 0.1);
+  border-radius: 5px;
+}
+
+.logout-group {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 35px;
+  left: 25px;
+
+  .logout-title {
+    font-size: 16px;
+    color: white;
+  }
+}
+
+.logout-icon {
+  cursor: pointer;
+  color: white;
 }

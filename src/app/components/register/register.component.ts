@@ -11,7 +11,7 @@ import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-register',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterLink],
   providers: [AuthService],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss',

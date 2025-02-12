@@ -1,4 +1,43 @@
 <ul class="sidebar">
-  <li>item1</li>
-  <li>item2</li>
+  @for(item of menuItems; track item.id) {
+  <li
+    class="main-item"
+    routerLinkActive="active-link"
+    [routerLink]="item.route"
+    (click)="toggleSubItems(item)"
+  >
+    <span>
+      @if(item.icon) {
+      <fa-icon [icon]="item.icon" class="menu-icon"></fa-icon>
+      }
+    </span>
+    <a>{{ item.title }}</a>
+  </li>
+
+  @if(item.expanded) { @for(subItem of item.subItems; track subItem.id) {
+  <li
+    class="subitem"
+    routerLinkActive="active-link"
+    [routerLink]="subItem.route"
+  >
+    <span>
+      @if(subItem.icon) {
+      <fa-icon [icon]="subItem.icon" class="menu-icon"></fa-icon>
+      }
+    </span>
+    <a>
+      {{ subItem.title }}
+    </a>
+  </li>
+  } } }
+  <div class="logout-group">
+    <span class="logout-title">Вихід</span>
+    <fa-icon
+      [icon]="faSignOutAlt"
+      class="logout-icon"
+      size="lg"
+      (click)="logout()"
+    >
+    </fa-icon>
+  </div>
 </ul>
