@@ -7,8 +7,8 @@ import {
 } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
-import { LoginRequest } from '../../../../models/loginRequest';
-import { TokenStorageService } from '../../../../services/token-storage.service';
+import { LoginRequest } from '../../models/loginRequest';
+import { TokenStorageService } from '../../services/token-storage.service';
 
 @Component({
   selector: 'app-login',

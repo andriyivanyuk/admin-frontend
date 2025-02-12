@@ -1,8 +1,11 @@
 .admin-layout {
   display: flex;
+  height: 100vh;
 
   .content {
     padding: 25px;
     width: 100%;
+    overflow-y: auto;
+    flex-grow: 1;
   }
 }

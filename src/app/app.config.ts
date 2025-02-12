@@ -7,7 +7,7 @@ import {
   withEventReplay,
 } from '@angular/platform-browser';
 import { AuthInterceptor } from './services/auth.interceptor';
-import { AuthService } from './layouts/auth-layout/services/auth.service';
+import { AuthService } from './services/auth.service';
 import {
   HTTP_INTERCEPTORS,
   provideHttpClient,
@@ -15,7 +15,8 @@ import {
 } from '@angular/common/http';
 import { TokenStorageService } from './services/token-storage.service';
 import { AuthGuard } from './guards/auth.guard';
-import { CategoryService } from './layouts/admin-layout/services/category.service';
+import { CategoryService } from './services/category.service';
+import { ProductStatusService } from './services/status.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -30,6 +31,7 @@ export const appConfig: ApplicationConfig = {
     },
     AuthService,
     CategoryService,
+    ProductStatusService,
     TokenStorageService,
     AuthGuard,
   ],

@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
 import { Router } from '@angular/router';
-import { User } from '../../../models/user';
-import { LoginRequest } from '../../../models/loginRequest';
+import { User } from '../models/user';
+import { LoginRequest } from '../models/loginRequest';
 
 @Injectable()
 export class AuthService {

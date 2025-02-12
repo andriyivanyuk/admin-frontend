@@ -4,11 +4,10 @@
     class="main-item"
     routerLinkActive="active-link"
     [routerLink]="item.route"
-    (click)="toggleSubItems(item)"
-  >
+    (click)="toggleSubItems(item)">
     <span>
       @if(item.icon) {
-      <fa-icon [icon]="item.icon" class="menu-icon"></fa-icon>
+      <fa-icon [icon]="item.icon" class="menu-icon" size="lg"></fa-icon>
       }
     </span>
     <a>{{ item.title }}</a>
@@ -18,11 +17,10 @@
   <li
     class="subitem"
     routerLinkActive="active-link"
-    [routerLink]="subItem.route"
-  >
+    [routerLink]="subItem.route">
     <span>
       @if(subItem.icon) {
-      <fa-icon [icon]="subItem.icon" class="menu-icon"></fa-icon>
+      <fa-icon [icon]="subItem.icon" class="menu-icon" size="lg"></fa-icon>
       }
     </span>
     <a>
