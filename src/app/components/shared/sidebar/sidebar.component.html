@@ -30,14 +30,8 @@
     </a>
   </li>
   } } }
-  <div class="logout-group">
+  <div class="logout-group" (click)="logout()">
     <span class="logout-title">Вихід</span>
-    <fa-icon
-      [icon]="faSignOutAlt"
-      class="logout-icon"
-      size="lg"
-      (click)="logout()"
-    >
-    </fa-icon>
+    <fa-icon [icon]="faSignOutAlt" class="logout-icon" size="2x"> </fa-icon>
   </div>
 </ul>

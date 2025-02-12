@@ -1,0 +1,38 @@
+<div class="category-wrapper">
+  <h4 class="card-title">Створити нову категорію</h4>
+  <form [formGroup]="form" class="category-form">
+    <div class="main-content">
+      <div class="form-group">
+        <label for="username">Назва категорії</label>
+        <input
+          formControlName="title"
+          type="text"
+          id="username"
+          class="form-control"
+          placeholder="Введіть назву"/>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Опис</label>
+        <textarea
+          class="form-control"
+          rows="3"
+          formControlName="description"
+          placeholder="Введіть опис (необовязково)">
+        </textarea>
+      </div>
+
+      <div class="category-btn-group">
+        <button
+          [disabled]="form.invalid"
+          (click)="createCategory()"
+          class="btn submit-btn">
+          Створити
+        </button>
+        <button (click)="clearForm()" type="button" class="btn btn-warning">
+          Очистити
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

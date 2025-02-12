@@ -11,7 +11,8 @@
               type="email"
               class="form-control"
               placeholder="Введіть email"
-              formControlName="email"/>
+              formControlName="email"
+            />
           </div>
           <div class="form-group">
             <label for="main-password">Пароль</label>
@@ -20,18 +21,20 @@
               class="form-control"
               id="main-password"
               placeholder="Введіть пароль"
-              formControlName="password"/>
+              formControlName="password"
+            />
           </div>
           <div class="form-group">
             <div class="additional-account">
-              <span>Немає акаунту?</span>
+              <span class="link-label">Немає акаунту?</span>
               <a class="link" routerLink="/auth/register">Реестрація</a>
             </div>
           </div>
           <button
             [disabled]="form.invalid"
             (click)="signIn()"
-            class="btn login-btn">
+            class="btn login-btn"
+          >
             Ввійти
           </button>
         </div>

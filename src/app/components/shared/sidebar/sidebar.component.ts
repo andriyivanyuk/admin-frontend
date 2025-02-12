@@ -3,10 +3,12 @@ import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { v4 as uuidv4 } from 'uuid';
+
 import { faDesktop } from '@fortawesome/free-solid-svg-icons';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faWarehouse } from '@fortawesome/free-solid-svg-icons';
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faTags } from '@fortawesome/free-solid-svg-icons';
 
 import { MenuItem } from '../../../models/menuItem';
 import { TokenStorageService } from '../../../services/token-storage.service';
@@ -44,6 +46,20 @@ export class SidebarComponent {
           title: 'Створити товар',
           icon: faPlus,
           route: '/admin/create-product',
+        },
+      ],
+      expanded: false,
+    },
+    {
+      id: uuidv4(),
+      title: 'Категорії',
+      icon: faTags,
+      subItems: [
+        {
+          id: uuidv4(),
+          title: 'Додати категорію',
+          icon: faPlus,
+          route: '/admin/create-category',
         },
       ],
       expanded: false,

@@ -8,15 +8,16 @@
 .form-group {
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
+  row-gap: 10px;
 }
 
 .form-group label {
   font-weight: 500;
 }
 
-.card {
-  width: 400px;
+.main-form {
+  width: 100%;
+  max-width: 450px;
 }
 
 .card-title {
@@ -39,8 +40,13 @@
   justify-content: space-between;
   align-items: center;
 
+  .link-label {
+    font-size: 14px;
+  }
+
   a {
     cursor: pointer;
+    color: #285059;
   }
 }
 

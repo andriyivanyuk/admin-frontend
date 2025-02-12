@@ -1,0 +1,32 @@
+.category-wrapper {
+  .category-form {
+    margin-top: 25px;
+  }
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .form-group label {
+    font-weight: 500;
+  }
+
+  .category-btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 20px;
+
+    .submit-btn {
+      background-color: #285059;
+      color: white;
+    }
+  }
+}
